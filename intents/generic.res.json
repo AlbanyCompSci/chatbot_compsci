@@ -4,6 +4,11 @@
 			"questions": ["what can you do", "what do you do"],
 			"answers": ["I can talk", "I talk with you"],
 			"intent": "doing"
+		},
+		{
+			"questions": ["how old are you", "how old are u", "whats your age"],
+			"answers": ["I am whatever you want me to be", "I am 1 day old", "why would you need to know"],
+			"intent": "age"
 		}
 	]
 }
