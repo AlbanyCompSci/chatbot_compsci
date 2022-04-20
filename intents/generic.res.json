@@ -1,0 +1,9 @@
+{
+	"responses": [
+		{
+			"questions": ["what can you do", "what do you do"],
+			"answers": ["I can talk", "I talk with you"],
+			"intent": "doing"
+		}
+	]
+}
