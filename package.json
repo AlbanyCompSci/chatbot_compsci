@@ -8,6 +8,7 @@
 		"train": "node src/util/manager.js",
 		"dev": "yarn train & nodemon index.js --ignore test/",
 		"debug": "DEBUG=* node index.js",
+		"clean": "find . \\( -name \"*.nlp\" \\) -type f -delete",
 		"test": "echo \"Test: Success\""
 	},
 	"dependencies": {
