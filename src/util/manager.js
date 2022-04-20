@@ -30,7 +30,7 @@ const add_js_replies = () => {
 			`It is ${new Date().toLocaleString('default', { weekday: 'long', timeZone: 'America/Los_Angeles' })}, ${new Date().toLocaleString('default', {
 				month: 'long',
 				timeZone: 'America/Los_Angeles',
-			})} ${new Date().getDate() - 1}${nth(parseInt(new Date().getDate() - 1))}, ${new Date().getFullYear()}`
+			})} ${new Date().getDate()}${nth(parseInt(new Date().getDate()))}, ${new Date().getFullYear()}`
 		);
 	});
 };

@@ -51,33 +51,37 @@ const prompt = () => {
 					);
 					break;
 				default:
-					if (line.trim() === '') {
-					} else if (line.length < 20) {
-						const matches = stringSimilarity.findBestMatch(line.trim(), commands);
-						if (matches.bestMatch.rating == 0) {
-							console.log(`Unknown command '${line}'`);
-						} else {
-							if (matches.bestMatch.target[matches.bestMatch.target.length - 1] === '*') {
-								console.log(`Unknown command '${line}'`);
-							} else {
-								console.log(`Command '${line}' not found, did you mean: ` + matches.bestMatch.target.split(' ')[0] + '?');
+					switch (true) {
+						case commandHandler(0):
+							user.countDocuments().then(function (user_count) {
+								console.log(`Registered users: ${user_count}`);
+							});
+							break;
+						case commandHandler(1):
+							console.log(
+								`connected to: mongodb+srv://${dbConfig.USERNAME}:${dbConfig.PASSWORD}@${dbConfig.HOST}/${dbConfig.DB}?retryWrites=true&w=majority`
+							);
+							break;
+
+						default:
+							if (line.trim() === '') {
+							} else if (line.length < 20) {
+								const matches = stringSimilarity.findBestMatch(line.trim(), commands);
+								if (matches.bestMatch.rating == 0) {
+									console.log(`Unknown command '${line}'`);
+								} else {
+									if (matches.bestMatch.target[matches.bestMatch.target.length - 1] === '*') {
+										console.log(`Unknown command '${line}'`);
+									} else {
+										console.log(`Command '${line}' not found, did you mean: ` + matches.bestMatch.target.split(' ')[0] + '?');
+									}
+								}
 							}
-						}
+							break;
+							break;
 					}
-					break;
 			}
-			switch (true) {
-				case commandHandler(0):
-					user.countDocuments().then(function (user_count) {
-						console.log(`Registered users: ${user_count}`);
-					});
-					break;
-				case commandHandler(1):
-					console.log(
-						`connected to: mongodb+srv://${dbConfig.USERNAME}:${dbConfig.PASSWORD}@${dbConfig.HOST}/${dbConfig.DB}?retryWrites=true&w=majority`
-					);
-					break;
-			}
+
 			setTimeout(function () {
 				rl.prompt();
 			}, 100);

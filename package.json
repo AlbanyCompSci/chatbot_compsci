@@ -4,7 +4,7 @@
 	"main": "server.js",
 	"private": true,
 	"scripts": {
-		"run": "yarn train & node server.js",
+		"serve": "yarn train & node index.js",
 		"train": "node src/util/manager.js",
 		"dev": "yarn train & nodemon index.js --ignore test/",
 		"debug": "DEBUG=* node index.js",
