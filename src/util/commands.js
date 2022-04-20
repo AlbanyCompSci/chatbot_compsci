@@ -4,11 +4,12 @@ const user = require('../models/user.model');
 const { spawn } = require('child_process');
 const numUtil = require('./numbers');
 const readline = require('readline');
+const crypto = require('crypto');
 const chalk = require('chalk');
 const util = require('util');
 const os = require('os');
 
-const commands = ['get_user_count', 'db_info', 'clear', 'help', 'exit', 'quit'];
+const commands = ['get_user_count', 'db_info', 'ask', 'clear', 'help', 'exit', 'quit'];
 
 const prompt = () => {
 	return new Promise(function (resolve, reject) {
@@ -61,6 +62,13 @@ const prompt = () => {
 							console.log(
 								`connected to: mongodb+srv://${dbConfig.USERNAME}:${dbConfig.PASSWORD}@${dbConfig.HOST}/${dbConfig.DB}?retryWrites=true&w=majority`
 							);
+							break;
+						case commandHandler(2):
+							const session = crypto.createHash('md5').update(line.split('ask ').pop()).digest('hex');
+							const time_stamp = new Date().getTime() / 1000;
+							getChatResponse(line.split('ask ').pop(), session, time_stamp).then((data) => {
+								console.log(data.answer);
+							});
 							break;
 
 						default:
