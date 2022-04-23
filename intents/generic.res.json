@@ -9,6 +9,16 @@
 			"questions": ["how old are you", "how old are u", "whats your age"],
 			"answers": ["I am whatever you want me to be", "I am 1 day old", "why would you need to know"],
 			"intent": "age"
+		},
+		{
+			"questions": ["I have a dog", "my dog is", "my dog"],
+			"answers": ["Tell me more about your dog", "Tell me more about your pets", "You have pets?"],
+			"intent": "dog"
+		},
+		{
+			"questions": ["I have a cat", "my cat is", "my cat"],
+			"answers": ["Tell me more about your cat", "Tell me more about your pets", "You have pets?"],
+			"intent": "cat"
 		}
 	]
 }
