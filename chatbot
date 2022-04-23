@@ -1,0 +1,20 @@
+(node:3353635) Warning: Accessing non-existent property 'user' of module exports inside circular dependency
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:3353635) Warning: Accessing non-existent property 'role' of module exports inside circular dependency
+(node:3353635) Warning: Accessing non-existent property 'ROLES' of module exports inside circular dependency
+(node:3353635) Warning: Accessing non-existent property 'user' of module exports inside circular dependency
+(node:3366268) Warning: Accessing non-existent property 'user' of module exports inside circular dependency
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:3366268) Warning: Accessing non-existent property 'role' of module exports inside circular dependency
+(node:3366268) Warning: Accessing non-existent property 'ROLES' of module exports inside circular dependency
+(node:3366268) Warning: Accessing non-existent property 'user' of module exports inside circular dependency
+(node:3454742) Warning: Accessing non-existent property 'user' of module exports inside circular dependency
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:3454742) Warning: Accessing non-existent property 'role' of module exports inside circular dependency
+(node:3454742) Warning: Accessing non-existent property 'ROLES' of module exports inside circular dependency
+(node:3454742) Warning: Accessing non-existent property 'user' of module exports inside circular dependency
+(node:3454804) Warning: Accessing non-existent property 'user' of module exports inside circular dependency
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:3454804) Warning: Accessing non-existent property 'role' of module exports inside circular dependency
+(node:3454804) Warning: Accessing non-existent property 'ROLES' of module exports inside circular dependency
+(node:3454804) Warning: Accessing non-existent property 'user' of module exports inside circular dependency
