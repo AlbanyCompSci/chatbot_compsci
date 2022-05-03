@@ -1,8 +1,8 @@
 {
-	"name": "chatbot-api",
+	"name": "@albanycompsci/chatbot-api",
 	"version": "0.1.5",
 	"main": "server.js",
-	"private": true,
+	"private": false,
 	"scripts": {
 		"serve": "yarn train & node index.js",
 		"train": "node src/util/manager.js",
@@ -11,6 +11,9 @@
 		"clean": "find . \\( -name \"*.nlp\" \\) -type f -delete",
 		"test": "echo \"Test: Success\""
 	},
+	  "publishConfig": {
+      "registry":"https://npm.pkg.github.com" 
+     },
 	"dependencies": {
 		"@babel/core": "^7.17.2",
 		"@babel/node": "^7.16.8",
