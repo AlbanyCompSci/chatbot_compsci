@@ -68,7 +68,7 @@ app.get('/', (req, res) => {
     <title>403: FORBIDDEN</title>
     <div class="container">
       <main>
-      <div class="mistake"><div>If you got here by mistake, don't panic!</div><div>Just close this tab and carry on</div></div>   
+      <div class="mistake"><div>If you got here by mistake, don't panic!</div><div>Just close this tab and carry on.</div></div>   
         <p class="devinfo-container">
           <span class="error-code"><strong>403</strong>: FORBIDDEN</span>
           <span class="devinfo-line">Code: <code>ACCESS_DENIED</code></span>
